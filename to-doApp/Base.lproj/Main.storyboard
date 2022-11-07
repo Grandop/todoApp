@@ -15,43 +15,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="48" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-Si-8N2" customClass="Ta">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-Si-8N2" customClass="Ta">
                                 <rect key="frame" x="16" y="119" width="343" height="537"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.10000000000000001" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="SB6-UT-RbD" customClass="TaskCell" customModule="to_doApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="343" height="48"/>
+                                        <rect key="frame" x="0.0" y="50" width="343" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SB6-UT-RbD" id="PHL-di-Vex">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR3-47-M1j">
-                                                    <rect key="frame" x="20" y="24" width="147" height="0.0"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAd-tN-4Rq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dadsadad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR3-47-M1j">
+                                                            <rect key="frame" x="21" y="20" width="75.666666666666671" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68t-sp-6yW">
+                                                            <rect key="frame" x="280" y="12" width="48" height="34.333333333333336"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" title=""/>
+                                                            <connections>
+                                                                <action selector="btnToRemove:" destination="SB6-UT-RbD" eventType="touchUpInside" id="4QG-9Z-vxa"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="eih-q4-tzo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="68t-sp-6yW" secondAttribute="trailing" constant="15" id="4RR-RO-pN0"/>
+                                                        <constraint firstItem="68t-sp-6yW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TR3-47-M1j" secondAttribute="trailing" constant="8" symbolic="YES" id="5CV-qS-IDE"/>
+                                                        <constraint firstItem="68t-sp-6yW" firstAttribute="top" secondItem="MAd-tN-4Rq" secondAttribute="top" constant="12" id="dNb-1r-7Sv"/>
+                                                        <constraint firstItem="TR3-47-M1j" firstAttribute="leading" secondItem="MAd-tN-4Rq" secondAttribute="leading" constant="21" id="lGC-LA-4wn"/>
+                                                        <constraint firstItem="TR3-47-M1j" firstAttribute="top" secondItem="MAd-tN-4Rq" secondAttribute="top" constant="20" symbolic="YES" id="lQ3-v8-FDe"/>
+                                                        <constraint firstAttribute="bottom" secondItem="68t-sp-6yW" secondAttribute="bottom" constant="13.666666666666664" id="v9T-Kr-3L9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68t-sp-6yW">
-                                                    <rect key="frame" x="275" y="7" width="48" height="35"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" title=""/>
-                                                    <connections>
-                                                        <action selector="buttonToRemoveTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOU-7C-x5Z"/>
-                                                    </connections>
-                                                </button>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="TR3-47-M1j" firstAttribute="leading" secondItem="PHL-di-Vex" secondAttribute="leadingMargin" id="F4l-E5-xth"/>
-                                                <constraint firstItem="68t-sp-6yW" firstAttribute="top" secondItem="PHL-di-Vex" secondAttribute="top" constant="7" id="JCf-JW-NVc"/>
-                                                <constraint firstAttribute="trailing" secondItem="68t-sp-6yW" secondAttribute="trailing" constant="20" id="Qa3-jf-qdq"/>
-                                                <constraint firstItem="TR3-47-M1j" firstAttribute="centerX" secondItem="PHL-di-Vex" secondAttribute="centerX" constant="-78" id="mxC-mq-Dof"/>
-                                                <constraint firstItem="TR3-47-M1j" firstAttribute="centerY" secondItem="PHL-di-Vex" secondAttribute="centerY" id="o4f-aF-KeN"/>
-                                                <constraint firstAttribute="bottom" secondItem="68t-sp-6yW" secondAttribute="bottom" constant="6" id="qYu-o6-Jw5"/>
+                                                <constraint firstAttribute="trailing" secondItem="MAd-tN-4Rq" secondAttribute="trailing" id="9px-PJ-xzm"/>
+                                                <constraint firstItem="MAd-tN-4Rq" firstAttribute="leading" secondItem="PHL-di-Vex" secondAttribute="leading" id="IFE-dP-6QE"/>
+                                                <constraint firstItem="MAd-tN-4Rq" firstAttribute="top" secondItem="PHL-di-Vex" secondAttribute="top" id="yJA-1K-VLX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

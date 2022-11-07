@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UptadeCells {
 
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -23,22 +23,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasksList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TaskCell
        
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 15
         cell.clipsToBounds = false
-        
-        cell.textLabel?.text = tasksList[indexPath.row]
+        cell.upadateDelegate = self
+        cell.taskName.text = tasksList[indexPath.row]
 
         return cell
     }
@@ -52,27 +52,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         taskTextField.text = ""
     }
-    
-    @IBAction func buttonToRemoveTask(_ sender: UIButton) {
-        var superview = sender.superview
-            while let view = superview, !(view is UITableViewCell) {
-                superview = view.superview
-            }
-            guard let cell = superview as? UITableViewCell else {
-                return
-            }
-            guard let indexPath = tableView.indexPath(for: cell) else {
-                return
-            }
-
-        tasksList.remove(at: indexPath.row)
-        tableView.reloadData()
-        setStorageTasks()
-    }
 
     func setStorageTasks() {
         UserDefaults.standard.set(tasksList, forKey: tasksListKey)
     }
     
+    func didPressTrash(cell: UITableViewCell) {
+        
+        let indexPath = tableView.indexPath(for: cell)
+        
+        tasksList.remove(at: indexPath?.row ?? 0)
+        tableView.reloadData()
+        setStorageTasks()
+    }
 }
 

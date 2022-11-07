@@ -13,6 +13,7 @@
 		F612DB3D2916DEB600FEDDD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F612DB3B2916DEB600FEDDD0 /* Main.storyboard */; };
 		F612DB3F2916DEB700FEDDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F612DB3E2916DEB700FEDDD0 /* Assets.xcassets */; };
 		F612DB422916DEB700FEDDD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F612DB402916DEB700FEDDD0 /* LaunchScreen.storyboard */; };
+		F68B9C3D291969150094FD34 /* protocolTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9C3C291969150094FD34 /* protocolTasks.swift */; };
 		F6D857372918AC67009003E5 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D857362918AC67009003E5 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		F612DB3E2916DEB700FEDDD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F612DB412916DEB700FEDDD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F612DB432916DEB700FEDDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68B9C3C291969150094FD34 /* protocolTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocolTasks.swift; sourceTree = "<group>"; };
 		F6D857362918AC67009003E5 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				F612DB352916DEB600FEDDD0 /* AppDelegate.swift */,
 				F612DB372916DEB600FEDDD0 /* SceneDelegate.swift */,
 				F612DB392916DEB600FEDDD0 /* ViewController.swift */,
+				F68B9C3C291969150094FD34 /* protocolTasks.swift */,
 				F6D857362918AC67009003E5 /* TaskCell.swift */,
 				F612DB3B2916DEB600FEDDD0 /* Main.storyboard */,
 				F612DB3E2916DEB700FEDDD0 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				F6D857372918AC67009003E5 /* TaskCell.swift in Sources */,
 				F612DB3A2916DEB600FEDDD0 /* ViewController.swift in Sources */,
 				F612DB362916DEB600FEDDD0 /* AppDelegate.swift in Sources */,
+				F68B9C3D291969150094FD34 /* protocolTasks.swift in Sources */,
 				F612DB382916DEB600FEDDD0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
