@@ -13,8 +13,7 @@
 		F612DB3D2916DEB600FEDDD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F612DB3B2916DEB600FEDDD0 /* Main.storyboard */; };
 		F612DB3F2916DEB700FEDDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F612DB3E2916DEB700FEDDD0 /* Assets.xcassets */; };
 		F612DB422916DEB700FEDDD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F612DB402916DEB700FEDDD0 /* LaunchScreen.storyboard */; };
-		F612DB4A2916E37800FEDDD0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F612DB492916E37800FEDDD0 /* TaskCell.swift */; };
-		F612DB4C2916EBA500FEDDD0 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F612DB4B2916EBA500FEDDD0 /* TaskList.swift */; };
+		F6D857372918AC67009003E5 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D857362918AC67009003E5 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +25,7 @@
 		F612DB3E2916DEB700FEDDD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F612DB412916DEB700FEDDD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F612DB432916DEB700FEDDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F612DB492916E37800FEDDD0 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
-		F612DB4B2916EBA500FEDDD0 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		F6D857362918AC67009003E5 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +61,7 @@
 				F612DB352916DEB600FEDDD0 /* AppDelegate.swift */,
 				F612DB372916DEB600FEDDD0 /* SceneDelegate.swift */,
 				F612DB392916DEB600FEDDD0 /* ViewController.swift */,
-				F612DB4B2916EBA500FEDDD0 /* TaskList.swift */,
-				F612DB492916E37800FEDDD0 /* TaskCell.swift */,
+				F6D857362918AC67009003E5 /* TaskCell.swift */,
 				F612DB3B2916DEB600FEDDD0 /* Main.storyboard */,
 				F612DB3E2916DEB700FEDDD0 /* Assets.xcassets */,
 				F612DB402916DEB700FEDDD0 /* LaunchScreen.storyboard */,
@@ -144,8 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F612DB4A2916E37800FEDDD0 /* TaskCell.swift in Sources */,
-				F612DB4C2916EBA500FEDDD0 /* TaskList.swift in Sources */,
+				F6D857372918AC67009003E5 /* TaskCell.swift in Sources */,
 				F612DB3A2916DEB600FEDDD0 /* ViewController.swift in Sources */,
 				F612DB362916DEB600FEDDD0 /* AppDelegate.swift in Sources */,
 				F612DB382916DEB600FEDDD0 /* SceneDelegate.swift in Sources */,
