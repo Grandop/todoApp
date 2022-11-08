@@ -59,11 +59,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func didPressTrash(cell: UITableViewCell) {
         
-        let indexPath = tableView.indexPath(for: cell)
+        let excludeRowAlert = UIAlertController(title: "Remover nota", message: "Você tem certeza que deseja remover a tarefa? ", preferredStyle: .alert)
         
-        tasksList.remove(at: indexPath?.row ?? 0)
-        tableView.reloadData()
-        setStorageTasks()
+        excludeRowAlert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+        excludeRowAlert.addAction(UIAlertAction(title: "Remover", style: .destructive) { _ in
+            
+            let indexPath = self.tableView.indexPath(for: cell)
+            
+            self.tasksList.remove(at: indexPath?.row ?? 0)
+            self.tableView.reloadData()
+            self.setStorageTasks()
+        })
+        
+        self.present(excludeRowAlert, animated: true)
     }
     
 }
