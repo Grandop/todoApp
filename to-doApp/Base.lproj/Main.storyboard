@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-Si-8N2" customClass="Ta">
-                                <rect key="frame" x="16" y="119" width="343" height="537"/>
+                                <rect key="frame" x="16" y="205" width="343" height="573"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.10000000000000001" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="SB6-UT-RbD" customClass="TaskCell" customModule="to_doApp" customModuleProvider="target">
@@ -67,20 +67,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-V6-blC">
-                                <rect key="frame" x="139" y="744" width="96" height="34"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Adicionar">
-                                    <backgroundConfiguration key="background" cornerRadius="20">
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </backgroundConfiguration>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buttonToAddTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJO-IP-dt6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO-DO LIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgM-ap-zFN">
                                 <rect key="frame" x="16" y="47" width="343" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -88,7 +74,7 @@
                                 <color key="highlightedColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Crie a tarefa aqui" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HCb-7r-PBw">
-                                <rect key="frame" x="16" y="674" width="343" height="47"/>
+                                <rect key="frame" x="16" y="111" width="269" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="v8A-PR-7Mj"/>
@@ -96,24 +82,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-V6-blC">
+                                <rect key="frame" x="306" y="119" width="53" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="rS5-pM-p5H"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="ztL-0i-d43"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="27"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonToAddTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJO-IP-dt6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HCb-7r-PBw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5G4-8N-ypP"/>
                             <constraint firstItem="4G0-Si-8N2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7wx-Bx-dnS"/>
-                            <constraint firstItem="4G0-Si-8N2" firstAttribute="top" secondItem="PgM-ap-zFN" secondAttribute="bottom" constant="8" id="8u1-Zx-yKf"/>
+                            <constraint firstItem="4G0-Si-8N2" firstAttribute="top" secondItem="PgM-ap-zFN" secondAttribute="bottom" constant="94" id="8u1-Zx-yKf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PgM-ap-zFN" secondAttribute="trailing" constant="16" id="CEO-VV-Gv8"/>
                             <constraint firstItem="PgM-ap-zFN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IVd-ge-hhg"/>
-                            <constraint firstItem="4G0-Si-8N2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="afN-wh-Mqa"/>
-                            <constraint firstItem="HCb-7r-PBw" firstAttribute="top" secondItem="4G0-Si-8N2" secondAttribute="bottom" constant="18" id="eH1-V2-7l5"/>
+                            <constraint firstItem="IKW-V6-blC" firstAttribute="leading" secondItem="HCb-7r-PBw" secondAttribute="trailing" constant="21" id="KvI-HO-dGk"/>
+                            <constraint firstItem="4G0-Si-8N2" firstAttribute="top" secondItem="IKW-V6-blC" secondAttribute="bottom" constant="47" id="OSx-kN-kOe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IKW-V6-blC" secondAttribute="trailing" constant="16" id="VO0-mE-2RQ"/>
+                            <constraint firstItem="4G0-Si-8N2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="afN-wh-Mqa"/>
+                            <constraint firstItem="HCb-7r-PBw" firstAttribute="top" secondItem="4G0-Si-8N2" secondAttribute="bottom" constant="-667" id="eH1-V2-7l5"/>
                             <constraint firstItem="PgM-ap-zFN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eWZ-ve-6bb"/>
                             <constraint firstItem="4G0-Si-8N2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="fFU-C1-ELK"/>
-                            <constraint firstItem="HCb-7r-PBw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-57" id="guH-bO-NFY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IKW-V6-blC" secondAttribute="trailing" constant="140" id="l1v-GL-KMr"/>
-                            <constraint firstItem="IKW-V6-blC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="ph8-KN-CL5"/>
-                            <constraint firstItem="HCb-7r-PBw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="qs9-24-BlU"/>
-                            <constraint firstItem="HCb-7r-PBw" firstAttribute="top" secondItem="IKW-V6-blC" secondAttribute="bottom" constant="-104" id="vkt-aZ-yip"/>
+                            <constraint firstItem="HCb-7r-PBw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-620" id="guH-bO-NFY"/>
+                            <constraint firstItem="HCb-7r-PBw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-90" id="qs9-24-BlU"/>
+                            <constraint firstItem="HCb-7r-PBw" firstAttribute="bottom" secondItem="IKW-V6-blC" secondAttribute="bottom" id="t14-lV-lnC"/>
                         </constraints>
                     </view>
                     <connections>
