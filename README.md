@@ -4,10 +4,6 @@
 
 - Screens made with storyboard
 
-- MVC architecture
-
-- UINavigationController for navigation between screens
-
 - UITableView
 
 - Autolayout
